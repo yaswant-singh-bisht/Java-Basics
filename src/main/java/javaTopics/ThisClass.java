@@ -1,13 +1,13 @@
 package javaTopics;
 
-public class ThisExample {
+public class ThisClass {
 	int num = 10;//instance variable
 	
-	ThisExample() {
+	ThisClass() {
 		System.out.println("Example on keyword \"this\"");
 	}
 
-	ThisExample(int num){
+	ThisClass(int num){
 		//invoking the default constructor
 		this();
 		//assigning local variable num to instance varialble num 
@@ -24,14 +24,14 @@ public class ThisExample {
 		System.out.println("Local variable num = "+num);
 		System.out.println("Instance variable num = "+this.num);
 		
-		this.greet();
+		this.greet(); // Same as "ThisExample.greet();"
 	}
 	
 	public static void main(String[] args) {
-		ThisExample obj1 = new ThisExample();
+		ThisClass obj1 = new ThisClass();
 		obj1.print();
 		
-		ThisExample obj2 = new ThisExample(30);
+		ThisClass obj2 = new ThisClass(30);
 		obj2.print();
 	}
 

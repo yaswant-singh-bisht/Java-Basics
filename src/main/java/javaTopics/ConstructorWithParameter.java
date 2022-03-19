@@ -2,6 +2,7 @@ package javaTopics;
 
 public class ConstructorWithParameter {
 	int x;
+	
 	ConstructorWithParameter(int i) {
 		x = i; 
 	}

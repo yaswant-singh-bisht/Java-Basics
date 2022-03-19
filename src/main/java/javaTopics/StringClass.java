@@ -6,12 +6,16 @@ public class StringClass {
 
 		String s = "my name is yash";
 		System.out.println(s);
+				
 		System.out.println(s.charAt(1));
 		String str1 = "Learning";
 		
+		System.out.println(str1.toLowerCase());
+		System.out.println(str1.toUpperCase());
+		
 		String str2 = new String("learning");
 		String str3 = new String("Java Tutorial");
-		System.out.println(str1.compareToIgnoreCase(str2));
+		System.out.println(str1.compareToIgnoreCase(str2)); //Unicode comparision
 		System.out.println(str1.compareTo(str2));
 		System.out.println(str2.compareTo(str3));
 		
@@ -44,6 +48,9 @@ public class StringClass {
 					"%d, and the string is "+
 					"%s", floatvar,intvar,strvar);
 		System.out.println(fs);
+		
+		String str6 = " trim ";
+		System.out.println(str6.trim());
 	}
 
 }

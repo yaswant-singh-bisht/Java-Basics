@@ -2,7 +2,8 @@ package javaTopics;
 
 public class Constructor {
 	int x;
-	public Constructor() {
+	
+	Constructor() {
 		x= 10;
 	}
 	
