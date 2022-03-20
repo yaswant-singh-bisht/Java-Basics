@@ -15,7 +15,7 @@ public class StaticVariableMethodBlock {
 	
 	public static void main(String[] args) {
 		System.out.println(a);
-		display();
+		display(); // Static method or variables can be called directly
 		
 		StaticBlockExample obj = new StaticBlockExample(); //If there is any reference to the class then static block will be executed
 		//Or
