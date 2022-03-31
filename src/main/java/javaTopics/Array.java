@@ -1,65 +1,10 @@
 package javaTopics;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
 public class Array {
-
-	public static void main(String[] args) {
-
-		char[] myArray; //declaration
-		myArray = new char[5]; //allocate memory
-
-		//Initialization
-		myArray[0] = 'H';
-		myArray[1] = 'e';
-		myArray[2] = 'l';
-		myArray[3] = 'l';
-		myArray[4] = 'o';
-
-		System.out.println(myArray);
-
-		//print array elements 
-		System.out.println("");
-		double myArrayList [] = {11.1,14.4,54.14,25.54,14.15,54,14}; 
-		for(int i = 0; i < myArrayList.length; i++){
-			//System.out.print(myArrayList[i]+", ");
-			System.out.print(myArrayList[i]);
-			if(i < myArrayList.length -1) {
-				System.out.print(", ");
-			}
-		}
-
-		// sum all the array element
-		System.out.println("");
-		double total = 0;
-		for(int i = 0; i < myArrayList.length; i++) {
-			total += myArrayList[i];
-		}
-		System.out.println("\nTotal: "+total);
-
-		//Find max of the array elements
-		double max = myArrayList[0];
-		for(int i = 1; i < myArrayList.length; i++) {
-			if(myArrayList[i] > max) {
-				max = myArrayList[i];
-			}
-		}
-		System.out.println("\nMax value: "+max);
-
-		//enhanced for loop (For each loop) to print all the elements of the array
-		for(double element: myArrayList) {
-			System.out.println(element);
-		}
-
-		//array a method argument
-		printArray(new int[] {3,1,5,2,4});
-
-		System.out.println();
-		//print array element in reverse order
-		printArray(reverse(new int[] {1,2,3,4,5}));
-
-		//Multi-dimensional array
-		System.out.println("\n");
-		multiDimensionalArray();
-	}
 
 	public static void printArray(int[] array) {
 		for(int i=0; i < array.length; i++) {
@@ -126,6 +71,93 @@ public class Array {
 		}
 	}
 
+	public static void arrayList() {
+		ArrayList<String> arrList = new ArrayList<String>();
+		arrList.add("Yash");
+		arrList.add("Yash"); //Array list allows duplicate values
+		arrList.add("Amit");
+		arrList.add("Rawat");
+		System.out.println("\narrList values - " + arrList);
+		System.out.println("Element at index 1 - "+arrList.get(1));
+		arrList.set(1, "Bisht");
+		System.out.println("Element at index 1 - "+arrList.get(1));
+		
+		//Iterating array list using Iterator
+		Iterator<String> itr = arrList.iterator();
+		while (itr.hasNext()){
+			System.out.println("Iterator element - "+ itr.next());
+		}
+		
+		//Sorting
+		Collections.sort(arrList);
+				
+		//Iterating ArrayList using For-each loop
+		for(String names:arrList) {
+			System.out.println("For each name - "+names);
+		}
+	}
+	
+	public static void main(String[] args) {
+
+		char[] myArray; //declaration
+		myArray = new char[5]; //allocate memory
+
+		//Initialization
+		myArray[0] = 'H';
+		myArray[1] = 'e';
+		myArray[2] = 'l';
+		myArray[3] = 'l';
+		myArray[4] = 'o';
+
+		System.out.println(myArray);
+
+		//print array elements 
+		System.out.println("");
+		double myArrayList [] = {11.1,14.4,54.14,25.54,14.15,54,14}; 
+		for(int i = 0; i < myArrayList.length; i++){
+			//System.out.print(myArrayList[i]+", ");
+			System.out.print(myArrayList[i]);
+			if(i < myArrayList.length -1) {
+				System.out.print(", ");
+			}
+		}
+
+		// sum all the array element
+		System.out.println("");
+		double total = 0;
+		for(int i = 0; i < myArrayList.length; i++) {
+			total += myArrayList[i];
+		}
+		System.out.println("\nTotal: "+total);
+
+		//Find max of the array elements
+		double max = myArrayList[0];
+		for(int i = 1; i < myArrayList.length; i++) {
+			if(myArrayList[i] > max) {
+				max = myArrayList[i];
+			}
+		}
+		System.out.println("\nMax value: "+max);
+
+		//enhanced for loop (For each loop) to print all the elements of the array
+		for(double element: myArrayList) {
+			System.out.println(element);
+		}
+
+		//array a method argument
+		printArray(new int[] {3,1,5,2,4});
+
+		System.out.println();
+		//print array element in reverse order
+		printArray(reverse(new int[] {1,2,3,4,5}));
+
+		//Multi-dimensional array
+		System.out.println("\n");
+		multiDimensionalArray();
+		
+		//Array List
+		arrayList();
+	}
 
 
 }
