@@ -3,7 +3,7 @@ package javaTopics;
 import java.text.SimpleDateFormat;
 import java.util.Date;;
 
-public class DateDemo {
+public class DateDemoClass {
 
 	public static void main(String[] args) {
 		Date now = new Date();
